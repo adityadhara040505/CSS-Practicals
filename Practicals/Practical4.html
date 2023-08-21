@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>implement functions</title>
+        <script>
+            var num = parseInt(prompt("Enter a number : "));
+            var temp = 0;
+            var remainder = 0;
+            var armstrongNum = 0;
+            function Armstrong(temp){
+                if(parseInt(temp)===0){
+                    if(armstrongNum == num){
+                        document.write("Armstrong number");
+                    }else{
+                        document.write("Not Armstrong number");
+                    }
+                    return;
+                }else{
+                    remainder = temp % 10;
+                    armstrongNum = remainder**3;
+                    Armstrong(parseInt(temp/10));
+                    document.write(`Number : ${num}<br>Temp : ${temp}<br>Remainder : ${remainder}<br>Armstrong number : ${armstrongNum}<br><br>`);
+                }
+            }
+            Armstrong(num);
+        </script>
+    </head>
+</html>

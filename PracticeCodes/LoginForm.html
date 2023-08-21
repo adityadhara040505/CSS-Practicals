@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login form</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var users = [
+                {userName : "AdiDhara", pass: "1234"},
+                {userName : "Dhara", pass: "1233"},
+                {userName : "Aditya", pass: "1232"},
+                {userName : "Mahesh", pass: "1231"},
+                {userName : "Aditi", pass: "1230"}
+            ];
+            function validate(){
+                
+                var userName = document.getElementById('userName').value;
+                var pass = document.getElementById('pass').value;
+                for(var user of users){
+                    if(userName === user.userName && pass === user.pass){
+                        document.write("Successfully loged in");
+                    }
+                }
+                if(user == users[users.length]){
+                    document.write("Login unsuccessful");
+                }
+            }
+            function checkUser(){
+                for(var user of users){
+                    if(document.getElementById('userName').value === user.userName){
+                        document.getElementById('status').innerHTML = "User is not available";
+                        break;
+                    }else{
+                        document.getElementById('status').innerHTML = "User is available";
+                    }
+                }
+            }
+            function checkNoUser(){
+                if(document.getElementById('userName').value == ""){
+                    document.getElementById('status').innerHTML = "Enter user name";
+                }
+            }
+        </script>
+    </head>
+    <body class="d-flex justify-content-center text-center align-items-center" style="height: 600px;">
+        <form>
+            <fieldset>
+                <legend><h2>Login Form</h2></legend>
+                <span>User Name : </span>
+                <input type="text" id="userName" class="form-control w-100" onkeyup="checkUser()" onblur="checkNoUser()">
+                <p id="status"></p>
+                <div class="d-inline p-3 m-3">
+                    <span>Password: </span>
+                    <input type="password" id="pass" class="form-control w-100">
+                </div>
+                <div>
+                    <button onclick="validate()" class="btn btn-danger">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
