@@ -1,0 +1,2 @@
+# CSS Practicals
+ JavaScript practicals
