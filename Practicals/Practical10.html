@@ -1,0 +1,18 @@
+<html>
+<head>
+Creating Cookie For USer Name 
+</head>
+<title>Creating Cookie For USer Name </title>
+<script type="text/javascript">
+function CreateCookie()
+{
+    document.cookie = document.getElementsByName('uname').values;
+}
+</script>
+<body>
+<form name="Form1">
+Enter Name:<input type="text" name="uname"/>
+<input type="button" value="Create Cookie" onclick="CreateCookie()"/>
+</form>
+</body>
+</html>
