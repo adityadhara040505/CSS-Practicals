@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handling</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function sayHello(){
+                alert('Hello user');
+            }
+            function sayGoodDay(){
+                alert(`Have a good day ${prompt('Enter your name : ')}`);
+            }
+        </script>
+    </head>
+    <body class="d-flex justify-content-center align-items-center text-center" style="height: 600px;" onload="javascript:alert('Welcome to JS');" onunload="javascript:alert('Bye Bye !!!');">
+        <button ondblclick="sayGoodDay()">Hello user</button>
+    </body>
+</html>
