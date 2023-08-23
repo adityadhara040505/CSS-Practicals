@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body style="display: flex;justify-content: center;align-items: center; height: 600px;text-align: center;">
+        <fieldset>
+            <legend><h2>Login Form</h2></legend>
+            <form>
+                <div>
+                    <div class="input-group m-2">
+                        <span class="m-2">User Name : </span><input type="text" class="form-control m-2">
+                    </div>
+                    <div class="input-group">
+                        <span class="m-2">Password : &nbsp;&nbsp;&nbsp;</span><input type="password" class="form-control m-2">
+                    </div>
+                    <div class="input-group mt-2 mb-2">
+                        <p>Select gender : </p>
+                        <div class="input-group">
+                            <input type="radio" name="gender" value="Male" class="form-check ms-5 me-1"><span>Male</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="radio" name="gender" value="Female" class="form-check ms-5 me-1"><span>Female</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="radio" name="gender" value="Trans" class="ms-5 me-1"><span>Trans</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <p class="m-2">Select Language :</p>
+                        <div class="input-group">
+                            <input type="checkbox" value="Marathi" class="ms-5 me-1"><span>Marathi</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" value="English" class="ms-5 me-1"><span>English</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" value="Hindi" class="ms-5 me-1"><span>Hindi</span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-danger w-50 m-2">
+                </div>
+            </form>
+        </fieldset>
+    </body>
+</html>
