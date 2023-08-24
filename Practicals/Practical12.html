@@ -3,16 +3,23 @@
     <head>
         <title>Setting regular expressions</title>
         <script>
+            var mobileNoRegExp = /\+91[0-9]{10}/;
+            alert(toString(mobileNoRegExp));
             function check(){
                 var text = document.getElementById('txt').innerText;
                 console.log(text);
-                if(text.match(/[0-9]{1}/)){
-                    console.log("Yes");
+                if(text.match(mobileNoRegExp)){
+                    document.getElementById('msg').innerHTML = "Mobile number is correct ";
+                }else{
+                    document.getElementById('msg').innerHTML = "Enter correct mobile number";
                 }
+                document.getElementById('number').innerHTML = document.getElementById('txt').value;
             }
         </script>
     </head>
     <body>
-        <input type="text" id="txt" onkeyup="check()">
+        <input type="text" id="txt" onkeypress="check()">
+        <p id="msg"></p>
+        <p id="number"></p>
     </body>
 </html>
