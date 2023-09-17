@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 16</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var banners = ["../assets/banner1.png","../assets/banner2.png","../assets/banner3.png"];
+            var i = 0;
+            function showBanner(){
+                if(i==3){i=0;}
+                document.getElementById('banner').src=banners[i];
+                i++;
+                setTimeout("showBanner()",5000);
+            }
+        </script>
+    </head>
+    <body onload="showBanner()">
+        <header>
+            <img src="" class="w-100" alt="Banner" id="banner">
+        </header>
+    </body>
+</html>

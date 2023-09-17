@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu demo</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            function getMessage(){
+                var lang = document.getElementById('language').value;
+                var msg = document.getElementById('msg');
+                switch(lang){
+                    case "marathi" : msg.innerHTML="नमस्कार";break;
+                    case "english" : msg.innerHTML="Hello";break;
+                    case "hindi" : msg.innerHTML="नमस्ते";break;
+                    case "sanskrit" : msg.innerHTML = "स्वागतम्‌";break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="d-flex justify-content-end" style="width: 1200px; height: 100px;">
+                <menu>
+                    <select class="form-select" style="width: min-content;" onchange="getMessage()" id="language">
+                        <option value="marathi">Marathi</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="english">English</option>
+                        <option value="sanskrit">Sanskrit</option>
+                    </select>
+                </menu>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height: 600px;">
+                <p id="msg"></p>
+            </div>
+        </header>
+    </body>
+</html>
