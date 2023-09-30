@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <title>Weather Application</title>
+        <style>
+            .card{
+                max-width: 470px;
+                background: -moz-linear-gradient(135deg,#a2eeda,#a69ed4);
+                color: rgb(179, 89, 89);
+                font-weight: 100;
+                margin: 100px auto 0;
+                border-radius: 20px;
+                padding: 40px 35px;
+                text-align: center;
+                margin-top: 4px;
+            }
+            .search{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            body{
+                background-image: url('https://img.freepik.com/free-vector/sky-background-video-conferencing_23-2148639325.jpg');
+                width: 1200px;
+                height: 600px;
+                background-size: 1500px 600px;
+            }
+        </style>
+    </head>
+    <body class=" d-flex justify-content-center align-items-center text-center" style="width: 1500px;height: 560;" style="background-repeat: no-repeat;">
+        <div class="card" style="width: 400px; height: 560px;">
+            <div class="search">
+                <input type="text"class="form-control me-3" name="" id="" placeholder="Enter city name" spellcheck="false">
+                <button class="btn btn-light" style="border: 0; border-radius: 50%;"><span class="bi bi-search"></span></button>
+            </div>
+            <div class="weather">
+                <br><br>
+                <h2 class="date" id="date" style="font-size: 35px;">Wednesday, 29th Sept</h2>
+                <h2 class="time" id="time" style="font-size: 30px;">12:30 <span id="am_pm">PM</span></h2>
+                <h2 class="temp" id="temp">35 celcius</h2>
+                <h2 class="city" id="city">Solapur</h2>
+                <div class="col">
+                    <span class="bi bi-clouds-fill"></span>
+                    <div>
+                        <p class="humidity" id="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <span class="bi bi-wind"></span>
+                    <div>
+                        <p class="wind">50km/hr</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
