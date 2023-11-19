@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 12</title>
+        <script>
+            function display(n){
+                if(n==1){
+                    document.querySelector("#para").innerHTML = "Apple";
+                }
+                if(n==2){
+                    document.querySelector("#para").innerHTML = "Banana";
+                }
+                if(n==3){
+                    document.querySelector("#para").innerHTML = "Guava";
+                }
+            }
+            document.addEventListener("contextmenu",function(event){event.preventDefault()});
+        </script>
+    </head>
+    <body>
+        <table name="myTable" border="1">
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>Image</td>
+                    <td>Information</td>
+                </tr>
+                <tr>
+                    <td>Apple</td>
+                    <td><img src="apple.jpg" alt="apple image" width="50px" height="50px" onmouseover="display(1)"></td>
+                    <td rowspan="3"><p id="para"></p></td>
+                </tr>
+                <tr>
+                    <td>Banana</td>
+                    <td><img src="banana.jpg" alt="banana image" width="50px" height="50px" onmouseover="display(2)"></td>
+                </tr>
+                <tr>
+                    <td>Guave</td>
+                    <td><img src="guava.jpg" alt="guave image" width="50px" height="50px" onmouseover="display(3)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

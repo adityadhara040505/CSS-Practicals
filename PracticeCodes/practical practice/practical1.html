@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 1</title>
+        <script>
+            function calculate(choice)
+            {
+                var no1 = parseInt(document.querySelector("#input1").value);
+                var no2 = parseInt(document.querySelector("#input2").value);
+                alert("Number 1: "+no1+" Number2: "+no2);
+                var res;
+                switch(choice)
+                {
+                    case 1 : res = no1 + no2; break;
+                    case 2 : res = no1 - no2; break;
+                    case 3 : res = no1 * no2; break;
+                    case 4 : 
+                             if(no2 == 0){
+                                res = "Not valid;"
+                             }
+                             else{
+                                res = no1 / no2;
+                             }
+                             break;
+                }
+                document.querySelector("#para").innerHTML = "Result : "+res;
+            }
+        </script>
+    </head>
+    <body style="display: flex;justify-content: center; align-items: center; height: 600px;">
+        <form action="" method="post" name="myForm">
+            Enter 1st number : <input type="number" id="input1"><br>
+            Enter 2nd number : <input type="number" id="input2"><br>
+            <input type="button" value="add" onclick="calculate(1)" style="margin-right: 20px;">
+            <input type="button" value="sub" onclick="calculate(2)" style="margin-right: 20px;">
+            <input type="button" value="mul" onclick="calculate(3)" style="margin-right: 20px;">
+            <input type="button" value="div" onclick="calculate(4)" style="margin-right: 20px;"><br>
+            <p id="para"></p>
+        </form>
+    </body>
+</html>

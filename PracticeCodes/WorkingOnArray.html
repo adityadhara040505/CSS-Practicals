@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Working on Array</title>
+        <script>
+            function arrays(){
+                var arr = ["C","C++","Java","PHP"];
+                var str;
+
+                //concat method
+                str = arr.concat();
+                document.querySelector("#para1").innerHTML += str;
+
+                //join method
+                str = arr.join(" | ");
+                document.querySelector("#para2").innerHTML += str;
+
+                //splice function
+                arr.splice(2,0,"Python","dJango","Swift");
+                str = arr.join(" | ");
+                document.querySelector("#para3").innerHTML += str;
+
+                arr.splice(2,3);
+                str = arr.join(" | ");
+                document.querySelector("#para4").innerHTML += str;
+
+                arr.splice(2);
+                str = arr.join(" | ");
+                document.querySelector("#para5").innerHTML += str;
+
+                //Re-initialising array
+                arr = ["C","C++","Java","PHP"];
+
+                //Changing elements of array : 
+                //    1) shift(): removing 1st element(only one element)    2) pop(): removing last element (only one element) 
+                //    3) unshift(): adding one or more element at beginning 4) push(): adding one or more elements at end
+                arr.shift();
+                str = arr.join(" | ");
+                document.querySelector("#para6").innerHTML += str;
+
+                arr.unshift("A","B");
+                str = arr.join(" | ");
+                document.querySelector("#para7").innerHTML += str;
+
+                arr.pop();
+                str = arr.join(" | ");
+                document.querySelector("#para8").innerHTML += str;
+
+                arr.push("C","D");
+                str = arr.join(" | ");
+                document.querySelector("#para9").innerHTML += str;
+
+                //Sorting a string :
+                arr.sort();
+                var para = document.createElement("p");
+                para.innerHTML = arr.join(" | ");
+                document.querySelector("div").appendChild(para);
+
+                //reversing the sorted array : 
+                arr.reverse();
+                para = document.createElement("p");
+                para.innerHTML = arr.join(" | ");
+                document.querySelector("div").appendChild(para);
+            }
+        </script>
+    </head>
+    <body onload="arrays()">
+        <h2 align="center">Working on Arrays</h2>
+        <h3>Initial array : ["C","C++","Java","PHP"]</h3>
+        <p id="para1">Concat : </p>
+        <p id="para2">Join : </p>
+        <p id="para3">splice with start, delete and (elements to be inserted) args : </p>
+        <p id="para4">splice with start and delete args : </p>
+        <p id="para5">splice with only start arg : </p>
+        <p id="para6">Shift : </p>
+        <p id="para7">Unshift : </p>
+        <p id="para8">Pop : </p>
+        <p id="para9">Push : </p>
+        <div></div>
+    </body>
+</html>

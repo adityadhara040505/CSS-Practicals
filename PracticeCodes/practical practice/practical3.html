@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array functions</title>
+        <script>
+            var arr = [2,43,64,1,4];
+            function display(){
+                //join function
+                document.write("Join function : "+arr.join(" | "));
+                //concat function
+                document.write("<br> Concat function : "+arr.concat());
+                //splice function with three arguments
+                arr.splice(2,0,100,200,300);
+                document.write("<br> Splice with all args : "+arr.join(" | "));
+                //splice function with 2 arguments
+                arr.splice(2,3);
+                document.write("<br> Splice function with 2 args : "+arr.join(" | "));
+                //splice function with only one argument
+                arr.splice(2)
+                document.write("<br> Splice function with single args : "+arr.join(" | "));
+
+                //re-assigning
+                arr = [2,43,64,1,4];
+
+                //pop function
+                arr.pop();
+                document.write("<br> Pop function : "+arr.join(" | "));
+                //push function
+                arr.push(100,200);
+                document.write("<br> Push function : "+arr.join(" | "));
+                //shift function
+                arr.shift();
+                document.write("<br> Shift function : "+arr.join(" | "));
+                //unshift function
+                arr.unshift(500,600);
+                document.write("<br> Unshift function : "+arr.join(" | "));
+
+                //reverse function
+                arr.reverse();
+                document.write("<br> Reverse function : "+arr.join(" | "));
+
+                //sort function
+                arr.sort();
+                document.write("<br> Sort function : "+arr.join(" | "));
+            }
+            display();
+        </script>
+    </head>
+</html>

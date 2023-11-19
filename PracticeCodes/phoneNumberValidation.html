@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Phone number validation</title>
+        
+    </head>
+    <body oncontextmenu="block()">
+        <input type="text" onkeyup="validate()" id="input">
+        <p id="para">Message : </p>
+        <script>
+            var input = document.getElementById('input').innerHTML;
+            var exp = /\+ [0-9]/;
+            function validate(){
+                if(exp.test(input)==true){
+                    document.getElementById('para').innerHTML = "Message: Valid";
+                }
+            }
+            function block(){
+                event=>event.preventDefault();
+            }
+        </script>
+    </body>
+</html>

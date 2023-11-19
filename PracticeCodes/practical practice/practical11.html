@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 11</title>
+        <script>
+            var reg = /[0-255]\.[0-255]\.[0-255]\.[0-255]/;
+            function validate(){
+                var ip = document.forms.myForm.ipAddr.value;
+                if(reg.exec(ip)!=null){
+                    document.write("Valid "+reg.exec(ip));
+                }
+                else{
+                 document.write("Not valid "+reg.exec(ip));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="post" name="myForm">
+            Enter IP Address : 
+            <input type="text" name="ipAddr">
+            <input type="button" value="validate" onclick="validate()">
+        </form>
+    </body>
+</html>

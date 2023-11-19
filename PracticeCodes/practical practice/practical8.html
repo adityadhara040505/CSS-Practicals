@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 8</title>
+        <script>
+            var win;
+            function openWindow(){
+                win = window.open("practical8_2ndPage.html","Demo window","height: 500px;width: 500px;");
+                win.document.write("<h2 align='center'>Hello There</h2>");
+                win.document.write("<p>Hello you are on Demo page</p>");
+            }
+            function closeWindow(){
+                win.close();
+            }
+            function addContent(){
+                
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Open window" onclick="openWindow()">
+        <input type="button" value="Add content" onclick="addContent()">
+        <input type="button" value="Close the opened window" onclick="closeWindow()">
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practical 9</title>
+        <script>
+            function createCookie(){
+                var user = document.forms.myForm.uname.value;
+                var pass = document.forms.myForm.pass.value;
+                document.cookie = "username="+user+";expires=Sun, 19 Nov 2023 10:00:00 UTC";
+                document.cookie = "password="+pass+";expires=Sun, 19 Nov 2023 10:00:00 UTC";
+                alert("Cookie is created : "+document.cookie);
+            }
+            function readCookie(){
+                var cookies = document.cookie.split(';');
+                var username = cookies[0].split('=');
+                var password = cookies[1].split('=');
+                var user = username[1];
+                var pass = password[1];
+                alert("Username : "+user+" Password : "+pass);
+            }
+            function deleteCookie(){
+                var user = document.forms.myForm.uname.value;
+                var pass = document.forms.myForm.pass.value;
+                document.cookie = "username="+user+";expires=Fri, 17 Nov 2023 10:00:00 UTC";
+                document.cookie = "password="+pass+";expires=Fri, 17 Nov 2023 10:00:00 UTC";
+                alert("The cookie : Username = "+user+" Password = "+pass+" is now deleted");
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" method="post" name="myForm">
+            Enter username : <input type="text" name="uname"><br>
+            Enter password : <input type="text" name="pass"><br>
+            <input type="button" value="Create a Cookie" onclick="createCookie()">
+            <input type="button" value="Read Cookie" onclick="readCookie()">
+            <input type="button" value="Delete Cookie" onclick="deleteCookie()">
+        </form>
+    </body>
+</html>

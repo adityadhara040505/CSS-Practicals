@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>String Manipulation function</title>
+        <script lang="javascript" type="text/javascript">
+            function solution(){
+                var count = 1;
+                var div = document.querySelector("#paras");
+                var str = "Welcome to JavaScript";
+                var para;
+
+                //charAt method
+                para = document.createElement("p");
+                para.innerHTML = "str.charAt(5) : "+str.charAt(5);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //charCodeAt() method
+                para = document.createElement("p");
+                para.innerHTML = "str.charCodeAt(5) : "+str.charCodeAt(5);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //concat() method
+                para = document.createElement("p");
+                var string = ". You are learning String functions";
+                para.innerHTML = "str.concat(\". You are learning String functions\") : "+str.concat(string);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                str = "Welcome to JavaScript";
+
+                //indexOf() method for single character
+                para = document.createElement("p");
+                para.innerHTML = "str.indexOf('m') : "+str.indexOf('m');
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //indexOf() method for string of multiple characters
+                para = document.createElement("p");
+                para.innerHTML = "str.indexOf(\"come\") : "+str.indexOf("come");
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //lastIndexOf() method for single character
+                para = document.createElement("p");
+                para.innerHTML = "str.lastIndexOf('m') : "+str.lastIndexOf('m');
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //lastIndexOf() method for string of multiple characters
+                para = document.createElement("p");
+                para.innerHTML = "str.lastIndexOf(\"come\") : "+str.lastIndexOf("come");
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //substr() method without LENGTH parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.substr(5) : "+str.substr(5);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //substr() method with LENGTH parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.substr(5,10) : "+str.substr(5,10);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //substring() method without TO parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.substring(5) : "+str.substring(5);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //substring() method with TO parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.substring(5,10) : "+str.substring(5,10);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //slice() method with first parameter greater than second parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.slice(5,10) : "+str.slice(5,10);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //slice() method with only first parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.slice(5) : "+str.slice(5);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //slice() method with first parameter lesser than second parameter
+                para = document.createElement("p");
+                para.innerHTML = "str.slice(5,-10) : "+str.slice(5,-10);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //search() method
+                para = document.createElement("p");
+                para.innerHTML = "str.search(\"come\") : "+str.search("come");
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                var reg = /\w{2}/;
+                //match() method using regular expression
+                para = document.createElement("p");
+                para.innerHTML = "str.match(/\w{2}/) : "+str.match(reg);
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //replace() method
+                para = document.createElement("p");
+                para.innerHTML = "str.replace(\"come\",\"done\") : "+str.replace("come","done");
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //toLowerCase() method
+                para = document.createElement("p");
+                para.innerHTML = "str.toLowerCase() : "+str.toLowerCase();
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //toUpperCase() method
+                para = document.createElement("p");
+                para.innerHTML = "str.toUpperCase() : "+str.toUpperCase();
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //toLocaleLowerCase() method
+                para = document.createElement("p");
+                para.innerHTML = "str.toLocaleLowerCase() : "+str.toLocaleLowerCase();
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+                //toLocaleUpperCase() method
+                para = document.createElement("p");
+                para.innerHTML = "str.toLocaleUpperCase() : "+str.toLocaleUpperCase();
+                para.id = "para"+count;
+                div.appendChild(para);
+                count++;
+
+            }
+
+        </script>
+    </head>
+    <body onload="solution()">
+        <h2 align="center">String Manipulation Functions</h2>
+        <h3>The string to be manipulated is : "Welcome to JavaScript"</h3>
+        <div id="paras"></div>
+    </body>
+</html>
